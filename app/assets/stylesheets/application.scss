@@ -28,22 +28,34 @@
 .title {
   font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
   text-align: left;
+  color: #165288;
   margin-top: 200px;
   margin-bottom: 80px;
+  position:relative;
+  top:-200px;
 }
 
 .slogan {
   margin-top: 10px;
   margin-bottom: 50px;
   text-align: left;
-  color: white;
-  top: 12px;
+  color: #165288;
+  position:relative;
+  top: -270px;
 }
 
 .lead {
   margin-bottom: 60px;
   text-align: left;
   color: white;
+  position:relative;
+  top: -270px;
+  color: #165288;
+}
+
+.kong {
+  margin-bottom: 60px;
+  text-align: left;
 }
 //首页图片与文字的样式设定//
 
