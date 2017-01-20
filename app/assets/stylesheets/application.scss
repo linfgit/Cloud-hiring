@@ -76,6 +76,7 @@
     //background-color:black;
     color:xxx;
     //text-align:center;
+    font-size:200%;
     padding:5px;
 }
 
@@ -91,7 +92,7 @@ top:-10px;
 {
 position:relative;
 right:100px;
-top:-60px;
+top:-100px;
 }
 
 .caption {    //底下的那三个图标
@@ -114,14 +115,15 @@ left:100px;
 
 }
 
+
 /* --------------------------------
 
-Primary style
+Primary style 这是那个关于云图的部分
 
 -------------------------------- */
 
 
-*, *:after, *:before {
+*, *:after, *:before {   //这一段是干嘛的？
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -131,7 +133,7 @@ body {
   font-size: 100%;
   font-family: "Droid Serif", serif;
   color: #7f8c97;
-  background-color: #e9f0f5;
+  background-color: 0;   //设置整体的背景颜色
 }
 
 
@@ -147,7 +149,7 @@ Modules - reusable parts of our design
   max-width: 1170px;
   margin: 0 auto;
 }
-.cd-container::after {
+.cd-container::after { //:after 在其元素的前面插入 content所表达的内容 其余的定义是对插入内容样式的定义
   /* clearfix */
   content: '';
   display: table;
@@ -159,15 +161,15 @@ Modules - reusable parts of our design
 Main components
 
 -------------------------------- */
-
+//为什么有的开头是#号，有的是@号,有的是.号 似乎#是给id引用的，.号是给class引用的
 
 #cd-timeline {
-  position: relative;
-  padding: 2em 0;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  position: relative;//规定元素的定位类型 relative 是相对定位
+  padding: 2em 0;    //声明元素的内边距
+  margin-top: 2em;   //声明元素的上外边距 em是css里的单位，该单位为字体大小的em倍
+  margin-bottom: 2em;//声明元素的下外边距
 }
-#cd-timeline::before {
+#cd-timeline::before {      //设置中间竖着的那条横杆
   /* this is the vertical line */
   content: '';
   position: absolute;
@@ -187,10 +189,17 @@ Main components
     margin-left: -2px;
   }
 }
+.cd-alignment-right //标题的位置
+{
+text-align: right;
+
+}
+
+
 
 .cd-timeline-block {
-  position: relative;
-  margin: 2em 0;
+  position: relative;  //position 属性规定元素的定位类型。relative是相对定位
+  margin: 2em 0;       //margin 定义外框属性 2em 等于当前字体尺寸的两倍
 }
 .cd-timeline-block:after {
   content: "";
@@ -277,7 +286,7 @@ Main components
     height: 48px;
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    background-color: #f0f0f0;
+    background-color:transparent;
     color: #9c9c9c;
     text-align: center;
     line-height: 1;
@@ -408,7 +417,7 @@ Main components
   border-radius: 0.25em;
 }
 .no-touch .cd-timeline-content .cd-read-more:hover {
-  background-color: #bac4cb;
+  background-color: transparent;
 }
 .cd-timeline-content .cd-date {
   float: left;
@@ -595,4 +604,9 @@ Main components
     -o-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+.cd-size
+{
+  font-size: 20px;
 }
